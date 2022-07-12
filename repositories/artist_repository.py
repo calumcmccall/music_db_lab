@@ -13,9 +13,3 @@ def create(artist):
     artist.id = id
     return artist
 
-
-
-
-
-
-#SAVE ARTIST
