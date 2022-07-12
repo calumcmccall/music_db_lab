@@ -50,3 +50,17 @@ def select(id):
         artist = artist_repository.select(result['id'])
         album = Album(result['title'], result['genre'], artist, result['id'])
     return album
+
+#SELECT ALL ALBUMS
+
+def select_all():
+    albums = []
+
+    sql = "SELECT * FROM albums"
+    results = run_sql(sql)
+
+    for row in results:
+        artist = artist_repository.select(row['id'])
+        album = Album(row['title'], row['genre'], artist, row['id'])
+        albums.append(album)
+    return albums

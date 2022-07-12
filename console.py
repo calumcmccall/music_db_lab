@@ -23,3 +23,6 @@ print(find_elvis_album.__dict__)
 
 find_elvis_artist = artist_repository.select(24)
 print(find_elvis_artist.__dict__)
+
+all_artists = artist_repository.select_all()
+all_albums = album_repository.select_all()

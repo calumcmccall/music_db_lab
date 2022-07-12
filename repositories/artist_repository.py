@@ -38,3 +38,14 @@ def select(id):
         result = results[0]
         artist = Artist(result['artist_name'], result['id'])    
     return artist
+
+#SELECT ALL ARTISTS
+
+def select_all():
+    artists = []
+    sql = "SELECT * FROM artists"
+    results = run_sql(sql)
+    for row in results:
+        artist = Artist(row['artist_name'], row['id'])
+        artists.append(artist)
+    return artists
