@@ -14,3 +14,6 @@ print(result.__dict__)
 
 album1 = Album("Best of Elvis", "Country", artist1)
 album_repository.create(album1)
+
+album_repository.delete_all()
+artist_repository.delete_all()

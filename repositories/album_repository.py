@@ -12,3 +12,21 @@ def create(album):
     id = results[0]['id']
     album.id = id
     return album
+
+# def delete_all():
+#     sql = """
+#         DELETE albums, artists
+#         FROM albums
+#         INNER JOIN artists on albums.artist_id = artists.id
+#     """
+#     run_sql(sql)
+
+# DELETE T1, T2
+# FROM T1
+# INNER JOIN T2 ON T1.key = T2.key
+# WHERE condition;
+
+#DELETE ALBUM 
+def delete_all():
+    sql = "DELETE FROM albums"
+    run_sql(sql)
