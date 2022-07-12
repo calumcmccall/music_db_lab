@@ -7,7 +7,6 @@ from models.artist import Artist
 import repositories.album_repository as album_repository
 
 #CREATE ARTIST
-
 def create(artist):
     sql = "INSERT INTO artists (artist_name) VALUES (%s) RETURNING *"
     values = [artist.name]
@@ -17,13 +16,11 @@ def create(artist):
     return artist
 
 #DELETE ARTIST
-
 def delete_all():
     sql = "DELETE FROM artists"
     run_sql(sql)
 
 #SELECT ARTIST BY ID
-
 def select(id):
     artist = None
 
@@ -40,7 +37,6 @@ def select(id):
     return artist
 
 #SELECT ALL ARTISTS
-
 def select_all():
     artists = []
     sql = "SELECT * FROM artists"
