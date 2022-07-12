@@ -6,7 +6,7 @@ from models.artist import Artist
 #CREATE ARTIST
 
 def create(artist):
-    sql = "INSERT INTO artist (name)"
+    sql = "INSERT INTO artists (artist_name) VALUES (%s) RETURNING *"
     values = [artist.name]
     results = run_sql(sql, values)
     id = results[0]['id']
